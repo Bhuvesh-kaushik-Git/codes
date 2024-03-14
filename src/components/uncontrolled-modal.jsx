@@ -18,7 +18,7 @@ const ModalContent = styled.div`
   width: 50%;
 `;
 
-export const Modal = ({ children }) => {
+export const UncontrolledModal = ({ children }) => {
   const [show, setShow] = useState(false);
 
   return (
@@ -27,7 +27,8 @@ export const Modal = ({ children }) => {
       {show && (
         <ModalBackground onClick={() => setShow(false)}>
           <ModalContent onClick={(e) => e.stopPropagation()}>
-            <button onClick={() => setShow(false)}>Hide Modal</button>
+            <h1>Hey Bhuvesh!</h1>
+            <button onClick={() => setShow(false)}>Click Me for Hide!</button>
             {children}
           </ModalContent>
         </ModalBackground>
